@@ -5,7 +5,7 @@ def install(options,buildout):
     # adding maps files
     f = os.path.join(options['compile-directory'], 'Makefile.in')
     c = open(f).read() 
-    for dep in 'openssl', 'sqlite', 'postgresql':
+    for dep in 'openssl',:
         op = buildout[dep]['location']
         oplp = os.path.join(op, 'lib')
         opip = os.path.join(op, 'include')
