@@ -1,11 +1,24 @@
 diff -ur apr-util-1.3.9/configure apr-util-1.3.9.new/configure
 --- apr-util-1.3.9/configure	2009-08-04 23:07:25.000000000 +0200
-+++ apr-util-1.3.9.new/configure	2010-01-23 13:11:13.000000000 +0100
-@@ -50837,3 +50837,4 @@
- $as_echo "$as_me: WARNING: unrecognized options: $ac_unrecognized_opts" >&2;}
++++ apr-util-1.3.9.new/configure	2010-01-23 13:16:42.000000000 +0100
+@@ -47339,6 +47339,7 @@
  fi
  
-+APR_UTIL_LDFLAGS="$APRUTIL_LDFLAGS $LDFLAGS"
+ 
++
+ if test $apu_try_external_expat = 1; then
+ 
+ 
+@@ -49517,7 +49518,8 @@
+ 
+ 
+ 
+-
++APRUTIL_LDFLAGS="$APRUTIL_LDFLAGS $MINITAGE_LDFLAGS"
++echo "FORCING LDFLAGS TO: \"$APRUTIL_LDFLAGS=\"" 
+ 
+ 
+ 
 diff -ur apr-util-1.3.9/Makefile.in apr-util-1.3.9.new/Makefile.in
 --- apr-util-1.3.9/Makefile.in	2008-11-21 07:32:58.000000000 +0100
 +++ apr-util-1.3.9.new/Makefile.in	2010-01-23 13:12:03.000000000 +0100
