@@ -1,6 +1,6 @@
-diff -ur apr-util-1.3.9/configure apr-util-1.3.9.new/configure
+diff -ur apr-util-1.3.9/configure apr-util-1.3.9-minitage/configure
 --- apr-util-1.3.9/configure	2009-08-04 23:07:25.000000000 +0200
-+++ apr-util-1.3.9.new/configure	2010-01-23 13:16:42.000000000 +0100
++++ apr-util-1.3.9-minitage/configure	2010-02-12 14:45:16.000000000 +0100
 @@ -47339,6 +47339,7 @@
  fi
  
@@ -9,13 +9,15 @@ diff -ur apr-util-1.3.9/configure apr-util-1.3.9.new/configure
  if test $apu_try_external_expat = 1; then
  
  
-@@ -49517,7 +49518,8 @@
+@@ -49517,7 +49518,11 @@
  
  
  
--
 +APRUTIL_LDFLAGS="$APRUTIL_LDFLAGS $MINITAGE_LDFLAGS"
-+echo "FORCING LDFLAGS TO: \"$APRUTIL_LDFLAGS=\"" 
++echo "FORCING LDFLAGS TO: \"$APRUTIL_LDFLAGS\"" 
+ 
++APRUTIL_INCLUDES="$APRUTIL_INCLUDES $MINITAGE_CFLAGS"
++echo "FORCING CFLAGS TO: \"$APRUTIL_INCLUDES\"" 
  
  
  
